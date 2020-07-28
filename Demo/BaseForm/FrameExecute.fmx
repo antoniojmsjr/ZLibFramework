@@ -1,0 +1,321 @@
+object frmFrameExecute: TfrmFrameExecute
+  Size.Width = 567.000000000000000000
+  Size.Height = 100.000000000000000000
+  Size.PlatformDefault = False
+  object lytMain: TLayout
+    Align = Client
+    Size.Width = 567.000000000000000000
+    Size.Height = 100.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object tbcOptionExecute: TTabControl
+      Align = Client
+      Size.Width = 567.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabcontrolstyle'
+      TabIndex = 1
+      TabOrder = 0
+      TabPosition = PlatformDefault
+      Sizes = (
+        567s
+        95s
+        567s
+        95s)
+      object tbiOption1: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Height = 5.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tbiOption1'
+        ExplicitSize.cx = 78.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object lytButton: TLayout
+          Align = HorzCenter
+          Margins.Top = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 183.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 200.000000000000000000
+          Size.Height = 85.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object imgExecute: TImage
+            MultiResBitmap.Height = 48
+            MultiResBitmap.Width = 48
+            MultiResBitmap = <
+              item
+                Width = 48
+                Height = 48
+                PNG = {
+                  89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                  87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                  021A494441546843ED98A14A05411486AF6030180C0683C16030180C0683EF60
+                  30180C3E80C16830180D061FC160543098CD0A06AB605050503058048341FF0F
+                  76601886EBECEE99DD2BCE0F1FC2BDD7D9FFCCCCCE9C73064545454545FF5A63
+                  D55F2BAD8A35312F662AD0877814D715976264342D8EC49BF84EE449EC8929D1
+                  9BC6C5BE7817319329F0BF4BA273B135AE44CC541D58B9CEB520D80231436CA3
+                  63B12E56C45CC5A2D8147CE756AC17F3CCFC8B088DF3D9B6605BFDA649C18BDE
+                  B926C48D08CD5F885E5FC6541D8AD03CDB2065D67BD7ACF814BEF973914B3B15
+                  66E2E5F3CD3F08F6720E61DC3DC724088C86B3BF2572C837EF681D0427863FE0
+                  BDC8A1987947AB204E843FD881B0D630F38EC641844727099BA552CC3B1A0511
+                  DEBA9C4856AA63DE513B8870002B3531EF8806C1A514FB710A56790DABEB8FCB
+                  EAD75293202C933212407F6C32DEDAAA1384A5794416EB8FDFF8B64F09C2DA3C
+                  0A6F7CF2AFC61A16440EF324856159DAFAC88E0591C33CA29EF09F433026F283
+                  C8659E7A222C944C9FC560B9CCB375288A7CF3949D743BFE84FC1576D0ED1879
+                  91A6734C86E639FB7BA9F2E8C6A58A7A82A22834CFCDEBBA799DCAE535B76257
+                  2C0B9A004EA4081C89A4E2D413A171E025A665D3B9DA24650E52F65E663ECC5D
+                  EA42A9CA6DEBAF56E7A2B7792ABE44CC640C8C9336B4AE2D2CDBEB9CDB1B8255
+                  E11DA0A5E866F659BC8A3B712668AFD3722F2A2A2A2A2A6AA1C1E007F9BB6579
+                  C7A694AA0000000049454E44AE426082}
+                FileName = 
+                  'D:\DELPHI\ZLibCompression\Demo\Img\2x\baseline_cached_black_24dp' +
+                  '.png'
+              end>
+            Align = Left
+            Margins.Top = 5.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 50.000000000000000000
+            Size.Height = 75.000000000000000000
+            Size.PlatformDefault = False
+            object feExecute: TFillRGBEffect
+              Color = xFF1A73E8
+            end
+          end
+          object sbExecute: TSpeedButton
+            Align = Contents
+            Cursor = crHandPoint
+            StyledSettings = [FontColor]
+            Hint = 'Executar...'
+            Size.Width = 200.000000000000000000
+            Size.Height = 85.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Title'
+            TextSettings.Font.Family = 'Roboto'
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Font.StyleExt = {00050000000000000004000000}
+            OnClick = sbExecuteClick
+          end
+        end
+      end
+      object tbiOption2: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Height = 5.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tbiOption2'
+        ExplicitSize.cx = 78.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object gplOption2: TGridPanelLayout
+          Align = Client
+          Size.Width = 567.000000000000000000
+          Size.Height = 95.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              SizeStyle = Absolute
+              Value = 150.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = lytCell1
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = lytCell2
+              Row = 0
+            end
+            item
+              Column = 2
+              Control = lytCell3
+              Row = 0
+            end>
+          RowCollection = <
+            item
+              Value = 100.000000000000000000
+            end
+            item
+              SizeStyle = Auto
+            end>
+          object lytCell1: TLayout
+            Align = Client
+            Size.Width = 208.500000000000000000
+            Size.Height = 95.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Path4: TPath
+              Align = Right
+              Data.Path = {
+                0900000000000000000010410000804001000000000070410000804001000000
+                00007041000040410100000052B89E4100004041010000000000404152B89E41
+                01000000B81E8540000040410100000000001041000040410100000000001041
+                00008040030000000000104100008040}
+              Margins.Top = 15.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Position.X = 159.500000000000000000
+              Position.Y = 15.000000000000000000
+              Size.Width = 13.000000000000000000
+              Size.Height = 75.000000000000000000
+              Size.PlatformDefault = False
+            end
+            object FillRGBEffect2: TFillRGBEffect
+              Color = xFF1A73E8
+            end
+            object Path5: TPath
+              Align = Right
+              Data.Path = {
+                0900000000000000000010410000804001000000000070410000804001000000
+                00007041000040410100000052B89E4100004041010000000000404152B89E41
+                01000000B81E8540000040410100000000001041000040410100000000001041
+                00008040030000000000104100008040}
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 15.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Position.X = 177.500000000000000000
+              Position.Y = 15.000000000000000000
+              Size.Width = 13.000000000000000000
+              Size.Height = 75.000000000000000000
+              Size.PlatformDefault = False
+            end
+            object Path6: TPath
+              Align = Right
+              Data.Path = {
+                0900000000000000000010410000804001000000000070410000804001000000
+                00007041000040410100000052B89E4100004041010000000000404152B89E41
+                01000000B81E8540000040410100000000001041000040410100000000001041
+                00008040030000000000104100008040}
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 15.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Position.X = 195.500000000000000000
+              Position.Y = 15.000000000000000000
+              Size.Width = 13.000000000000000000
+              Size.Height = 75.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+          object lytCell2: TLayout
+            Align = Client
+            Size.Width = 150.000000000000000000
+            Size.Height = 95.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Text1: TText
+              Align = Client
+              Size.Width = 150.000000000000000000
+              Size.Height = 95.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'Title'
+              TextSettings.Font.Family = 'Roboto'
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.Font.StyleExt = {00050000000000000004000000}
+            end
+          end
+          object lytCell3: TLayout
+            Align = Client
+            Size.Width = 208.500000000000000000
+            Size.Height = 95.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object FillRGBEffect1: TFillRGBEffect
+              Color = xFF1A73E8
+            end
+            object Path1: TPath
+              Align = Left
+              Data.Path = {
+                0900000000000000000010410000804001000000000070410000804001000000
+                00007041000040410100000052B89E4100004041010000000000404152B89E41
+                01000000B81E8540000040410100000000001041000040410100000000001041
+                00008040030000000000104100008040}
+              Margins.Top = 15.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Position.Y = 15.000000000000000000
+              Size.Width = 13.000000000000000000
+              Size.Height = 75.000000000000000000
+              Size.PlatformDefault = False
+            end
+            object Path2: TPath
+              Align = Left
+              Data.Path = {
+                0900000000000000000010410000804001000000000070410000804001000000
+                00007041000040410100000052B89E4100004041010000000000404152B89E41
+                01000000B81E8540000040410100000000001041000040410100000000001041
+                00008040030000000000104100008040}
+              Margins.Top = 15.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Position.X = 36.000000000000000000
+              Position.Y = 15.000000000000000000
+              Size.Width = 13.000000000000000000
+              Size.Height = 75.000000000000000000
+              Size.PlatformDefault = False
+            end
+            object Path3: TPath
+              Align = Left
+              Data.Path = {
+                0900000000000000000010410000804001000000000070410000804001000000
+                00007041000040410100000052B89E4100004041010000000000404152B89E41
+                01000000B81E8540000040410100000000001041000040410100000000001041
+                00008040030000000000104100008040}
+              Margins.Top = 15.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Position.X = 18.000000000000000000
+              Position.Y = 15.000000000000000000
+              Size.Width = 13.000000000000000000
+              Size.Height = 75.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+        end
+      end
+    end
+  end
+  object ppmExecute: TPopupMenu
+    Left = 176
+    Top = 8
+    object mniEncodingUTF8: TMenuItem
+      Text = 'Encoding :: UTF8'
+      OnClick = mniEncodingUTF8Click
+    end
+    object mniEncodingANSI: TMenuItem
+      Text = 'Encoding :: ANSI'
+      OnClick = mniEncodingANSIClick
+    end
+    object mniEncodingASCII: TMenuItem
+      Text = 'Encoding :: ASCII'
+      OnClick = mniEncodingASCIIClick
+    end
+    object mniEncodingUTF7: TMenuItem
+      Text = 'Encoding :: UTF7'
+      OnClick = mniEncodingUTF7Click
+    end
+    object mniEncodingUnicode: TMenuItem
+      Text = 'Encoding :: Unicode'
+      OnClick = mniEncodingUnicodeClick
+    end
+    object mniEncodingBigEndianUnicode: TMenuItem
+      Text = 'Encoding :: BigEndianUnicode'
+      OnClick = mniEncodingBigEndianUnicodeClick
+    end
+  end
+end

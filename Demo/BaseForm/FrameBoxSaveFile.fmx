@@ -1,0 +1,478 @@
+object frmFrameBoxSaveFile: TfrmFrameBoxSaveFile
+  Size.Width = 604.000000000000000000
+  Size.Height = 465.000000000000000000
+  Size.PlatformDefault = False
+  object rctSaveFile: TRectangle
+    Align = Client
+    Fill.Color = claWhite
+    Padding.Left = 3.000000000000000000
+    Padding.Top = 3.000000000000000000
+    Padding.Right = 3.000000000000000000
+    Padding.Bottom = 3.000000000000000000
+    Size.Width = 604.000000000000000000
+    Size.Height = 465.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFF1A73E8
+    object lytSaveFile: TLayout
+      Align = Client
+      Size.Width = 598.000000000000000000
+      Size.Height = 459.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object lytMD5: TLayout
+        Align = Bottom
+        Position.Y = 402.000000000000000000
+        Size.Width = 598.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object edtBoxSaveFileMD5Value: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Bottom
+          TabOrder = 2
+          ReadOnly = True
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.Size = 13.000000000000000000
+          Position.Y = 27.000000000000000000
+          HitTest = False
+          Size.Width = 598.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+          object BoxSaveFileMD5Check: TPath
+            Align = Right
+            Cursor = crHandPoint
+            Data.Path = {
+              22000000000000000000404100000040020000000000D0400000004002000000
+              000000400000D040020000000000004000004041020000000000004000008C41
+              020000000000D0400000B04102000000000040410000B0410200000000008C41
+              0000B041020000000000B04100008C41020000000000B0410000404102000000
+              0000B0410000D0400200000000008C4100000040020000000000404100000040
+              00000000000040410000A0410200000048E1F2400000A0410200000000008040
+              AE478341020000000000804000004041020000000000804048E1F24002000000
+              48E1F2400000804002000000000040410000804002000000AE47834100008040
+              020000000000A04148E1F240020000000000A04100004041020000000000A041
+              AE47834102000000AE4783410000A04102000000000040410000A04100000000
+              52B884415C8FF240010000000000204152B8624101000000B81EED40A4703941
+              010000000000C040000050410100000000002041000088410100000000009041
+              000010410100000052B884415C8FF2400300000052B884415C8FF240}
+            Opacity = 0.899999976158142100
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 2.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Margins.Bottom = 2.000000000000000000
+            Position.X = 568.000000000000000000
+            Position.Y = 2.000000000000000000
+            Size.Width = 20.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            WrapMode = Fit
+            OnClick = BoxSaveFileMD5CheckClick
+            object freBoxBoxSaveFileMD5Check: TFillRGBEffect
+              Color = claBlack
+            end
+          end
+          object BoxSaveFileMD5Copy: TPath
+            Align = Right
+            Cursor = crHandPoint
+            Data.Path = {
+              3900000000000000000080400000E04001000000000080400000A84101000000
+              000090410000A84101000000000090410000B84101000000000080400000B841
+              020000009A9939400000B8410200000000000040CDCCB0410200000000000040
+              0000A84101000000000000400000E04001000000000080400000E04000000000
+              0000A0410000404002000000CDCCA84100004040020000000000B0419A997940
+              020000000000B0410000A040010000000000B04100008841020000000000B041
+              CDCC904102000000CDCCA84100009841020000000000A0410000984101000000
+              000000410000984102000000CDCCDC4000009841020000000000C040CDCC9041
+              020000000000C04000008841010000000000C0400000A040020000000000C040
+              9A99794002000000CDCCDC400000404002000000000000410000404001000000
+              48E1324100004040020000009A9939411F85EB3F0200000033334B410000803F
+              02000000000060410000803F02000000CDCC74410000803F0200000033338341
+              1F85EB3F020000005C8F864100004040010000000000A0410000404000000000
+              00006041000040400200000033335741000040400200000000005041CDCC5C40
+              02000000000050410000804002000000000050419A9991400200000033335741
+              0000A04002000000000060410000A04002000000CDCC68410000A04002000000
+              000070419A9991400200000000007041000080400200000000007041CDCC5C40
+              02000000CDCC6841000040400200000000006041000040400000000000002041
+              0000E04001000000000020410000A04001000000000000410000A04001000000
+              0000004100008841010000000000A04100008841010000000000A0410000A040
+              01000000000090410000A04001000000000090410000E0400100000000002041
+              0000E04003000000000020410000E040}
+            Opacity = 0.899999976158142100
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 2.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Margins.Bottom = 2.000000000000000000
+            Position.X = 538.000000000000000000
+            Position.Y = 2.000000000000000000
+            Size.Width = 20.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            WrapMode = Fit
+            OnClick = BoxSaveFileMD5CopyClick
+            object freBoxSaveFileMD5Copy: TFillRGBEffect
+              Color = claBlack
+            end
+          end
+        end
+        object txtBoxSaveFileMD5Title: TText
+          Align = Bottom
+          Position.Y = 2.000000000000000000
+          Size.Width = 598.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'MD5'
+          TextSettings.Font.Family = 'Roboto'
+          TextSettings.Font.StyleExt = {00050000000000000004000000}
+          TextSettings.HorzAlign = Leading
+        end
+      end
+      object lbFile: TListBox
+        Align = Client
+        Margins.Left = 35.000000000000000000
+        Margins.Top = 20.000000000000000000
+        Margins.Right = 35.000000000000000000
+        Size.Width = 528.000000000000000000
+        Size.Height = 382.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'transparentlistboxstyle'
+        TabOrder = 1
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 528.000000000000000000
+        Viewport.Height = 382.000000000000000000
+        object lbiHeader: TListBoxItem
+          Size.Width = 528.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'lbiHeader'
+          object lytHeader: TLayout
+            Align = Client
+            Padding.Left = 3.000000000000000000
+            Padding.Top = 3.000000000000000000
+            Padding.Right = 3.000000000000000000
+            Padding.Bottom = 3.000000000000000000
+            Size.Width = 528.000000000000000000
+            Size.Height = 100.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object rctHeader: TRectangle
+              Align = Client
+              Fill.Color = claWhite
+              Size.Width = 522.000000000000000000
+              Size.Height = 94.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Dash = Dash
+              object gplHeader: TGridPanelLayout
+                Align = Client
+                Size.Width = 522.000000000000000000
+                Size.Height = 94.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                ColumnCollection = <
+                  item
+                    Value = 60.000000000000000000
+                  end
+                  item
+                    Value = 40.000000000000000000
+                  end>
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = lytHeaderCell1
+                    Row = 0
+                  end
+                  item
+                    Column = 1
+                    Control = lytHeaderCell2
+                    Row = 0
+                  end>
+                RowCollection = <
+                  item
+                    Value = 100.000000000000000000
+                  end
+                  item
+                    SizeStyle = Auto
+                  end>
+                object lytHeaderCell1: TLayout
+                  Align = Client
+                  Size.Width = 313.200012207031300000
+                  Size.Height = 94.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  object txtHeaderCell1: TText
+                    Align = Client
+                    Margins.Left = 10.000000000000000000
+                    Margins.Right = 10.000000000000000000
+                    Size.Width = 293.200012207031300000
+                    Size.Height = 94.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 
+                      'Selecione um arquivo para ser salvo depois da decodifica'#231#227'o e de' +
+                      'scompacta'#231#227'o'
+                    TextSettings.Font.Family = 'Roboto'
+                    TextSettings.Font.Size = 13.000000000000000000
+                    TextSettings.Font.StyleExt = {00050000000000000004000000}
+                  end
+                end
+                object lytHeaderCell2: TLayout
+                  Align = Client
+                  Size.Width = 208.799987792968800000
+                  Size.Height = 94.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 1
+                  object lytButtonSaveFile: TLayout
+                    Align = Client
+                    Margins.Top = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 208.799987792968800000
+                    Size.Height = 84.000000000000000000
+                    Size.PlatformDefault = False
+                    TabOrder = 0
+                    object imgButtonSaveFile: TImage
+                      MultiResBitmap.Height = 36
+                      MultiResBitmap.Width = 36
+                      MultiResBitmap = <
+                        item
+                          Width = 36
+                          Height = 36
+                          PNG = {
+                            89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+                            98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                            017B494441545847ED973B4BC440144647052B0B0B2BB5B3F001368AB5B65616
+                            E21FD0DE4A1016046DFD0F362A8885622F889676F65682BD828FCAD7F9B2098C
+                            21263B8FC52DE6C0218F993B7BC9DDE426269108A42FDF86B0942BAE73FF955D
+                            FCCED57E10FDF9B66748093591126A2225D4444AA809D78486711BA7B0AEED68
+                            DD79DC41C57485713CC44FBCC2491455AD630E6FF10B15A3D88E70B942D3B88C
+                            8A59C4531CC33233A8B105D455548C62BDA96B961BF884C5F81D1E5BC767786F
+                            1D6BAE626CEAD677FE0F1DE0263E6647C6CCE25A7B37630527DABBD91CCD554C
+                            C7B826244EB085CFA8F8412C18409549639AA3B94EF824F48147B885FAE1323A
+                            A731CDD15C277C122A28974F7895C92624216197CFBB4C36A109D9E5F32E934D
+                            6842052A9177996C6225148D9E4BA8AA41AA21EEA1C66E30F67796BEE1D47AD4
+                            137513EC632DEBF886C5E3BD5BEAAE5CC54646F012DF51DDBA6AB110B5E62B9E
+                            E310FEE2AF771A25A5BE348A6A0731D163E1012FF0452712897818F30376A37C
+                            BCC23DA9E00000000049454E44AE426082}
+                          FileName = 
+                            'D:\DELPHI\ZLibCompression\Demo\Img\save_alt-black-24dp\2x\baseli' +
+                            'ne_save_alt_black_24dp.png'
+                        end>
+                      Align = Left
+                      Margins.Top = 27.000000000000000000
+                      Margins.Bottom = 27.000000000000000000
+                      Position.Y = 27.000000000000000000
+                      Size.Width = 45.000000000000000000
+                      Size.Height = 30.000000000000000000
+                      Size.PlatformDefault = False
+                      object FillRGBEffect1: TFillRGBEffect
+                        Color = xFF1A73E8
+                      end
+                    end
+                    object sbButtonSaveFile: TSpeedButton
+                      Align = Contents
+                      Cursor = crHandPoint
+                      StyledSettings = [FontColor]
+                      Margins.Left = 1.000000000000000000
+                      Margins.Right = 5.000000000000000000
+                      Size.Width = 202.799987792968800000
+                      Size.Height = 84.000000000000000000
+                      Size.PlatformDefault = False
+                      Text = '               Escolher Arquivo'
+                      TextSettings.Font.Family = 'Roboto'
+                      TextSettings.Font.Size = 14.000000000000000000
+                      TextSettings.Font.StyleExt = {00050000000000000004000000}
+                      TextSettings.HorzAlign = Leading
+                      OnClick = sbButtonSaveFileClick
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+        object lbiDivision: TListBoxItem
+          Position.Y = 100.000000000000000000
+          Size.Width = 528.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+        end
+        object lbiFilePath: TListBoxItem
+          Position.Y = 125.000000000000000000
+          Size.Width = 528.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object lytFilePath: TLayout
+            Align = Client
+            Margins.Left = 3.000000000000000000
+            Size.Width = 525.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object txtFilePathTitle: TText
+              Align = Left
+              Size.Width = 100.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'Caminho:'
+              TextSettings.Font.Size = 13.000000000000000000
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              TextSettings.HorzAlign = Leading
+            end
+            object txtFilePathValue: TText
+              Align = Client
+              Size.Width = 425.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 14.000000000000000000
+              TextSettings.HorzAlign = Leading
+            end
+          end
+        end
+        object lbiFileName: TListBoxItem
+          Position.Y = 165.000000000000000000
+          Size.Width = 528.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object lytFileName: TLayout
+            Align = Client
+            Margins.Left = 3.000000000000000000
+            Size.Width = 525.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object txtFileNameTitle: TText
+              Align = Left
+              Size.Width = 100.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'Nome:'
+              TextSettings.Font.Size = 13.000000000000000000
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              TextSettings.HorzAlign = Leading
+            end
+            object txtFileNameValue: TText
+              Align = Client
+              Size.Width = 425.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 14.000000000000000000
+              TextSettings.HorzAlign = Leading
+            end
+          end
+        end
+        object lbiFileExtension: TListBoxItem
+          Position.Y = 205.000000000000000000
+          Size.Width = 528.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object lytFileExtension: TLayout
+            Align = Client
+            Margins.Left = 3.000000000000000000
+            Size.Width = 525.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object txtFileExtensionTitle: TText
+              Align = Left
+              Size.Width = 100.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'Extens'#227'o:'
+              TextSettings.Font.Size = 13.000000000000000000
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              TextSettings.HorzAlign = Leading
+            end
+            object txtFileExtensionValue: TText
+              Align = Client
+              Size.Width = 425.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 14.000000000000000000
+              TextSettings.HorzAlign = Leading
+            end
+          end
+        end
+        object lbiFileDateTime: TListBoxItem
+          Position.Y = 245.000000000000000000
+          Size.Width = 528.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          object lytFileDateTime: TLayout
+            Align = Client
+            Margins.Left = 3.000000000000000000
+            Size.Width = 525.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object txtFileDateTimeTitle: TText
+              Align = Left
+              Size.Width = 100.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'Data e Hora:'
+              TextSettings.Font.Size = 13.000000000000000000
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              TextSettings.HorzAlign = Leading
+            end
+            object txtFileDateTimeValue: TText
+              Align = Client
+              Size.Width = 425.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 14.000000000000000000
+              TextSettings.HorzAlign = Leading
+            end
+          end
+        end
+        object lbiFileSize: TListBoxItem
+          Position.Y = 285.000000000000000000
+          Size.Width = 528.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          object lytFileSize: TLayout
+            Align = Client
+            Margins.Left = 3.000000000000000000
+            Size.Width = 525.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object txtFileSizeTitle: TText
+              Align = Left
+              Size.Width = 100.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'Tamanho:'
+              TextSettings.Font.Size = 13.000000000000000000
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              TextSettings.HorzAlign = Leading
+            end
+            object txtFileSizeValue: TText
+              Align = Client
+              Size.Width = 425.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 14.000000000000000000
+              TextSettings.HorzAlign = Leading
+            end
+          end
+        end
+      end
+    end
+  end
+  object sdFile: TSaveDialog
+    Filter = 'Arquivos(*.*)|*.*'
+    Title = 'Salvar arquivo'
+    Left = 9
+    Top = 5
+  end
+end

@@ -1,0 +1,230 @@
+object frmFrameBoxImage: TfrmFrameBoxImage
+  Size.Width = 800.000000000000000000
+  Size.Height = 380.000000000000000000
+  Size.PlatformDefault = False
+  object rctBoxImage: TRectangle
+    Align = Client
+    Fill.Color = claWhite
+    Padding.Left = 3.000000000000000000
+    Padding.Top = 3.000000000000000000
+    Padding.Right = 3.000000000000000000
+    Padding.Bottom = 3.000000000000000000
+    Size.Width = 800.000000000000000000
+    Size.Height = 380.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFF1A73E8
+    object lytBoxImage: TLayout
+      Align = Client
+      Size.Width = 794.000000000000000000
+      Size.Height = 374.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object edtBoxImageMD5Value: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Bottom
+        TabOrder = 1
+        ReadOnly = True
+        TextSettings.Font.Family = 'Roboto'
+        TextSettings.Font.Size = 13.000000000000000000
+        Position.Y = 344.000000000000000000
+        HitTest = False
+        Size.Width = 794.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Style, FontColor]
+        object BoxImageMD5ValueCopy: TPath
+          Align = Right
+          Cursor = crHandPoint
+          Data.Path = {
+            3900000000000000000080400000E04001000000000080400000A84101000000
+            000090410000A84101000000000090410000B84101000000000080400000B841
+            020000009A9939400000B8410200000000000040CDCCB0410200000000000040
+            0000A84101000000000000400000E04001000000000080400000E04000000000
+            0000A0410000404002000000CDCCA84100004040020000000000B0419A997940
+            020000000000B0410000A040010000000000B04100008841020000000000B041
+            CDCC904102000000CDCCA84100009841020000000000A0410000984101000000
+            000000410000984102000000CDCCDC4000009841020000000000C040CDCC9041
+            020000000000C04000008841010000000000C0400000A040020000000000C040
+            9A99794002000000CDCCDC400000404002000000000000410000404001000000
+            48E1324100004040020000009A9939411F85EB3F0200000033334B410000803F
+            02000000000060410000803F02000000CDCC74410000803F0200000033338341
+            1F85EB3F020000005C8F864100004040010000000000A0410000404000000000
+            00006041000040400200000033335741000040400200000000005041CDCC5C40
+            02000000000050410000804002000000000050419A9991400200000033335741
+            0000A04002000000000060410000A04002000000CDCC68410000A04002000000
+            000070419A9991400200000000007041000080400200000000007041CDCC5C40
+            02000000CDCC6841000040400200000000006041000040400000000000002041
+            0000E04001000000000020410000A04001000000000000410000A04001000000
+            0000004100008841010000000000A04100008841010000000000A0410000A040
+            01000000000090410000A04001000000000090410000E0400100000000002041
+            0000E04003000000000020410000E040}
+          Opacity = 0.899999976158142100
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 2.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 2.000000000000000000
+          Position.X = 734.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 20.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          WrapMode = Fit
+          OnClick = BoxImageMD5ValueCopyClick
+          object freBoxImageMD5ValueCopy: TFillRGBEffect
+            Color = claBlack
+          end
+        end
+        object BoxImageMD5Check: TPath
+          Align = Right
+          Cursor = crHandPoint
+          Data.Path = {
+            22000000000000000000404100000040020000000000D0400000004002000000
+            000000400000D040020000000000004000004041020000000000004000008C41
+            020000000000D0400000B04102000000000040410000B0410200000000008C41
+            0000B041020000000000B04100008C41020000000000B0410000404102000000
+            0000B0410000D0400200000000008C4100000040020000000000404100000040
+            00000000000040410000A0410200000048E1F2400000A0410200000000008040
+            AE478341020000000000804000004041020000000000804048E1F24002000000
+            48E1F2400000804002000000000040410000804002000000AE47834100008040
+            020000000000A04148E1F240020000000000A04100004041020000000000A041
+            AE47834102000000AE4783410000A04102000000000040410000A04100000000
+            52B884415C8FF240010000000000204152B8624101000000B81EED40A4703941
+            010000000000C040000050410100000000002041000088410100000000009041
+            000010410100000052B884415C8FF2400300000052B884415C8FF240}
+          Opacity = 0.899999976158142100
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 2.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Margins.Bottom = 2.000000000000000000
+          Position.X = 764.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 20.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          WrapMode = Fit
+          OnClick = BoxImageMD5CheckClick
+          object freBoxImageMD5Check: TFillRGBEffect
+            Color = claBlack
+          end
+        end
+      end
+      object txtBoxImageMD5Title: TText
+        Align = Bottom
+        Position.Y = 319.000000000000000000
+        Size.Width = 794.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'MD5'
+        TextSettings.Font.Family = 'Roboto'
+        TextSettings.Font.StyleExt = {00050000000000000004000000}
+        TextSettings.HorzAlign = Leading
+      end
+      object lytFooterBoxImage: TLayout
+        Align = Bottom
+        Margins.Top = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.Y = 287.000000000000000000
+        Size.Width = 794.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object rctFooterBoxImage: TRectangle
+          Align = Client
+          Fill.Color = claWhite
+          Margins.Right = 1.000000000000000000
+          Size.Width = 793.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          object seFooterBoxImage: TShadowEffect
+            Distance = 5.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.100000001490116100
+            Opacity = 0.100000001490116100
+            ShadowColor = claBlack
+          end
+          object txtFooterBoxImageBytes: TText
+            Align = Left
+            Opacity = 0.699999988079071000
+            Margins.Left = 1.000000000000000000
+            Position.X = 1.000000000000000000
+            Size.Width = 200.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'bytes 0 '
+            TextSettings.Font.Family = 'Roboto'
+            TextSettings.HorzAlign = Leading
+          end
+          object BoxImageLoadImage: TPath
+            Align = Right
+            Cursor = crHandPoint
+            Data.Path = {
+              3000000000000000000084410000C040010000000000844100008C4102000000
+              0000844151AC9D4102000000A2586B410000AC4102000000000048410000AC41
+              020000005EA724410000AC41020000000000084151AC9D410200000000000841
+              00008C4101000000000008410000A040020000000000084168A2674002000000
+              9BE81941FFFF1F40020000000000304100002040020000006517464100002040
+              02000000000058416AA2674002000000000058410000A0400100000000005841
+              000078410200000000005841146B80410200000029D650410000844102000000
+              000048410000844102000000D7293F41000084410200000000003841146B8041
+              02000000000038410000784101000000000038410000C0400100000000002041
+              0000C0400100000000002041000078410200000000002041B30B874102000000
+              9BE83141000090410200000000004841000090410200000065175E4100009041
+              0200000000007041B30B87410200000000007041000078410100000000007041
+              0000A0400200000000007041779D324002000000A25853410000803F02000000
+              000030410200803F020000005EA70C410000803F020000000000E040779D3240
+              020000000000E0400000A040010000000000E04000008C41020000000000E040
+              F04CA44102000000216617410000B84102000000000048410000B84102000000
+              DF9978410000B8410200000000009041F04CA441020000000000904100008C41
+              01000000000090410000C04001000000000084410000C0400300000000008441
+              0000C040}
+            Opacity = 0.899999976158142100
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 2.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Margins.Bottom = 2.000000000000000000
+            Position.X = 768.000000000000000000
+            Position.Y = 2.000000000000000000
+            Size.Width = 20.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            WrapMode = Fit
+            OnClick = BoxImageLoadImageClick
+            object freBoxImageLoadImage: TFillRGBEffect
+              Color = claBlack
+            end
+          end
+        end
+        object odFile: TOpenDialog
+          Filter = 
+            'All (*.gif;*.png;*.jpg;*.jpeg;*.bmp;*.ico;*.emf;*.wmf;*.tif;*.ti' +
+            'ff)|*.gif;*.png;*.jpg;*.jpeg;*.bmp;*.ico;*.emf;*.wmf;*.tif;*.tif' +
+            'f|GIF Image (*.gif)|*.gif|Portable Network Graphics (*.png)|*.pn' +
+            'g|JPEG Image File (*.jpg)|*.jpg|JPEG Image File (*.jpeg)|*.jpeg|' +
+            'Bitmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles (*.' +
+            'emf)|*.emf|Metafiles (*.wmf)|*.wmf|TIFF Images (*.tif)|*.tif|TIF' +
+            'F Images (*.tiff)|*.tiff'
+          Title = 'Selecione um arquivo'
+          Left = 160
+          Top = 48
+        end
+      end
+      object imgBox: TImage
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+          end>
+        Align = Client
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 774.000000000000000000
+        Size.Height = 280.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+end

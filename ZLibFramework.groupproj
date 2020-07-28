@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{29FBF66F-1655-4CDB-8A52-B994A39C9483}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ZLibFramework.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demo\BaseForm\BaseForm.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demo\Demo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ZLibFramework">
+        <MSBuild Projects="ZLibFramework.dproj"/>
+    </Target>
+    <Target Name="ZLibFramework:Clean">
+        <MSBuild Projects="ZLibFramework.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ZLibFramework:Make">
+        <MSBuild Projects="ZLibFramework.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BaseForm">
+        <MSBuild Projects="Demo\BaseForm\BaseForm.dproj"/>
+    </Target>
+    <Target Name="BaseForm:Clean">
+        <MSBuild Projects="Demo\BaseForm\BaseForm.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BaseForm:Make">
+        <MSBuild Projects="Demo\BaseForm\BaseForm.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Demo">
+        <MSBuild Projects="Demo\Demo.dproj"/>
+    </Target>
+    <Target Name="Demo:Clean">
+        <MSBuild Projects="Demo\Demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Demo:Make">
+        <MSBuild Projects="Demo\Demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ZLibFramework;BaseForm;Demo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ZLibFramework:Clean;BaseForm:Clean;Demo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ZLibFramework:Make;BaseForm:Make;Demo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

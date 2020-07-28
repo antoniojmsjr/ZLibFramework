@@ -1,0 +1,169 @@
+inherited frmChildBase: TfrmChildBase
+  Caption = 'Formul'#225'rio Base'
+  ClientHeight = 404
+  ClientWidth = 727
+  Padding.Left = 5.000000000000000000
+  Padding.Top = 5.000000000000000000
+  Padding.Right = 5.000000000000000000
+  Padding.Bottom = 5.000000000000000000
+  DesignerMasterStyle = 0
+  inherited lytContainer: TLayout
+    Size.Width = 717.000000000000000000
+    Size.Height = 394.000000000000000000
+    inherited vsbContainer: TVertScrollBox
+      Size.Width = 717.000000000000000000
+      Size.Height = 394.000000000000000000
+      Viewport.Width = 717.000000000000000000
+      Viewport.Height = 394.000000000000000000
+      object gplContainer: TGridPanelLayout
+        Align = Client
+        Size.Width = 717.000000000000000000
+        Size.Height = 394.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = lytCell1
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = lytCell2
+            Row = 0
+          end
+          item
+            Column = 0
+            Control = lytCell3
+            Row = 1
+          end
+          item
+            Column = 1
+            Control = lytCell4
+            Row = 1
+          end
+          item
+            Column = 0
+            Control = lytCell5
+            Row = 2
+          end
+          item
+            Column = 1
+            Control = lytCell6
+            Row = 2
+          end
+          item
+            Column = 0
+            Control = lytCell7
+            Row = 3
+          end
+          item
+            Column = 1
+            Control = lytCell8
+            Row = 3
+          end>
+        RowCollection = <
+          item
+            SizeStyle = Absolute
+            Value = 45.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            SizeStyle = Absolute
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            SizeStyle = Auto
+          end>
+        object lytCell1: TLayout
+          Align = Client
+          Margins.Left = 1.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Size.Width = 352.500000000000000000
+          Size.Height = 45.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+        object lytCell2: TLayout
+          Align = Client
+          Margins.Right = 1.000000000000000000
+          Size.Width = 357.500000000000000000
+          Size.Height = 45.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+        end
+        object lytCell3: TLayout
+          Align = Client
+          Margins.Left = 1.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Size.Width = 352.500000000000000000
+          Size.Height = 149.500000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+        end
+        object lytCell4: TLayout
+          Align = Client
+          Margins.Right = 1.000000000000000000
+          Size.Width = 357.500000000000000000
+          Size.Height = 149.500000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+        end
+        object lytCell5: TLayout
+          Align = Client
+          Margins.Left = 1.000000000000000000
+          Size.Width = 357.500000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+        end
+        object lytCell6: TLayout
+          Align = Client
+          Margins.Right = 1.000000000000000000
+          Size.Width = 357.500000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+        end
+        object lytCell7: TLayout
+          Align = Client
+          Margins.Left = 1.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 1.000000000000000000
+          Size.Width = 352.500000000000000000
+          Size.Height = 148.500000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+        end
+        object lytCell8: TLayout
+          Align = Client
+          Margins.Right = 1.000000000000000000
+          Margins.Bottom = 1.000000000000000000
+          Size.Width = 357.500000000000000000
+          Size.Height = 148.500000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+        end
+      end
+    end
+  end
+  object StyleBookMain: TStyleBook
+    Styles = <
+      item
+      end>
+    Left = 61
+    Top = 26
+  end
+end

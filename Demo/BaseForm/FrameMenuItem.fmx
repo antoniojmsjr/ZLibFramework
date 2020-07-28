@@ -1,0 +1,89 @@
+object frmFrameMenuItem: TfrmFrameMenuItem
+  Align = Client
+  HitTest = False
+  Size.Width = 504.000000000000000000
+  Size.Height = 143.000000000000000000
+  Size.PlatformDefault = False
+  object lytMain: TLayout
+    Align = Client
+    Size.Width = 504.000000000000000000
+    Size.Height = 143.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lytImage: TLayout
+      Align = Left
+      Size.Width = 57.000000000000000000
+      Size.Height = 142.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object imgMain: TImage
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+          end>
+        Align = Contents
+        HitTest = False
+        Size.Width = 57.000000000000000000
+        Size.Height = 142.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Center
+        object FillRGBEffect2: TFillRGBEffect
+          Color = xFF434343
+        end
+      end
+    end
+    object lytDescription: TLayout
+      Align = Client
+      Size.Width = 447.000000000000000000
+      Size.Height = 142.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object txtTitle: TText
+        Align = Top
+        HitTest = False
+        Margins.Left = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Size.Width = 442.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'T'#205'TULO'
+        TextSettings.Font.Family = 'Roboto'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00050000000000000004000000}
+        TextSettings.HorzAlign = Leading
+      end
+      object txtDetail: TText
+        Align = Top
+        HitTest = False
+        Margins.Left = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 35.000000000000000000
+        Size.Width = 442.000000000000000000
+        Size.Height = 15.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'DESCRI'#199#195'O'
+        TextSettings.Font.Family = 'Roboto'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.HorzAlign = Leading
+      end
+      object FillRGBEffect1: TFillRGBEffect
+        Color = xFF434343
+      end
+    end
+    object lnDivision: TLine
+      Align = Bottom
+      HitTest = False
+      LineType = Bottom
+      Margins.Left = 3.000000000000000000
+      Margins.Right = 3.000000000000000000
+      Position.X = 3.000000000000000000
+      Position.Y = 142.000000000000000000
+      Size.Width = 498.000000000000000000
+      Size.Height = 1.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF8A8A8A
+    end
+  end
+end

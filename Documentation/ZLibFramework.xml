@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name=".ZLibFramework" platform="Win64">
+  <contains name="ZLibFramework" />
+  <contains name="ZLibFramework.Decompress" />
+  <contains name="ZLibFramework.Core" />
+  <contains name="ZLibFramework.Compression" />
+  <contains name="ZLibFramework.Types" />
+  <contains name="ZLibFramework.Interfaces" />
+</namespace>
