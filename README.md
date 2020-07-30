@@ -109,7 +109,7 @@ end;
 
 ## Demo
 [![Download](https://img.shields.io/badge/Download-Demo.zip-orange.svg)](https://github.com/antoniojmsjr/ZLibFramework/files/4998500/Demo.zip)
-![ZLibFramework](https://user-images.githubusercontent.com/20980984/88873616-6df12600-d1f3-11ea-8b48-3a1775624715.png)
+![ZLibFramework](https://user-images.githubusercontent.com/20980984/88880108-4b1a3e00-d202-11ea-9d45-26a7f7ed19b5.png)
 
 ## Licença
 `ZLibFramework` is free and open-source software licensed under the [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/antoniojmsjr/ZLibFramework/blob/master/LICENSE)
