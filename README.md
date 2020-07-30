@@ -4,8 +4,8 @@
 ![Compatibility](https://img.shields.io/badge/Compatibility-VCL,%20Firemonkey,%20DataSnap%20-brightgreen.svg)
 ![](https://img.shields.io/github/stars/antoniojmsjr/ZLibFramework.svg) ![](https://img.shields.io/github/forks/antoniojmsjr/ZLibFramework.svg) ![](https://img.shields.io/github/issues/antoniojmsjr/ZLibFramework.svg)
 <p align="center">
-  <a href="https://github.com/antoniojmsjr/ZLibFramework/blob/master/Demo/Image/Logo.png">
-    <img alt="ZLibFramework" height="150" src="https://github.com/antoniojmsjr/ZLibFramework/blob/master/Demo/Image/Logo.png">
+  <a href="https://github.com/antoniojmsjr/ZLibFramework/blob/master/Image/Logo.png">
+    <img alt="ZLibFramework" height="150" src="https://github.com/antoniojmsjr/ZLibFramework/blob/master/Image/Logo.png">
   </a>
 </p>
 
@@ -46,6 +46,8 @@ Framework de compressão e descompressão com a opção de codificação em Base
 
 	* Bitmap
 		* No aplicativo de demonstração, tem um exemplo de compressão de uma imagem no format bitmap, no total de 2.391.674 bytes:
+			
+			#Resultado
 			* Compressão e codificação em Base64: Uma redução de 645.774 bytes ou 27% no seu tamanho.
 			* Compressão: Uma redução de 1.082.249 bytes ou 45,25% no seu tamanho.
 
@@ -56,8 +58,6 @@ Framework de compressão e descompressão com a opção de codificação em Base
 		* No aplicativo de demonstração, tem um exemplo de compressão de imagem no format png, no total de 42.436 bytes:
 			* Compressão e codificação em Base64: Um aumento de 13.808 bytes ou 32,53% no seu tamanho.
 			* Compressão: Uma redução de 255 bytes ou 0,60% no seu tamanho.
-
-*
 
 ## Instalação Manual:
 
@@ -108,7 +108,7 @@ end;
 ```
 
 ## Demo
-![Demo.zip](https://github.com/antoniojmsjr/ZLibFramework/files/4998500/Demo.zip)
+[![Download](https://img.shields.io/badge/Download-Demo.zip-orange.svg)](https://github.com/antoniojmsjr/ZLibFramework/files/4998500/Demo.zip)
 ![ZLibFramework](https://user-images.githubusercontent.com/20980984/88873616-6df12600-d1f3-11ea-8b48-3a1775624715.png)
 
 ## Licença
