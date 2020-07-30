@@ -18,17 +18,16 @@ A biblioteca desenvolvida utilizando as classes nativas do Delphi.
 
 Biblioteca foi dividida em duas classes:
 
-* Base64: Classe de compressão e codificação para Base64 e decodificação e descompressão da Base64.
+* `Base64`: Classe de compressão e codificação para Base64 e decodificação e descompressão da Base64.
 
-* Data: Classe somente de compressão e descompressão de dados.
+* `Data`: Classe somente de compressão e descompressão de dados.
 
 Algoritmo de compressão implementado:
 
-* Deflate
-* GZip
+* `Deflate`
+* `GZip`
 
 NOTA: As funções sempre retornam um MD5 antes da codificação e o MD5 depois da codificação, que podem ser usados para garantir que um determinado texto foi decodificado corretamente e validando com o MD5 gerado antes da codificação.
-
 
 ## Para que?
 
@@ -37,27 +36,28 @@ Framework de compressão e descompressão com a opção de codificação em Base
 * Compressão de textos:
 
 	* No aplicativo de demonstração, tem um exemplo de compressão de uma NF-e com 100 itens vendidos, no total de 94.543 caracteres:
+		#### Resultado
 		* Compressão e codificação em Base64: Uma redução de 91.167 caracteres ou 96,42% no seu tamanho.
 		* Compressão: Uma redução de 92.012 caracteres ou 97,32% no seu tamanho.
-
 	* Algoritmo de compressão: Deflate
 
 * Compressão de imagens
 
 	* Bitmap
 		* No aplicativo de demonstração, tem um exemplo de compressão de uma imagem no format bitmap, no total de 2.391.674 bytes:
-			
-			#Resultado
+			#### Resultado
 			* Compressão e codificação em Base64: Uma redução de 645.774 bytes ou 27% no seu tamanho.
 			* Compressão: Uma redução de 1.082.249 bytes ou 45,25% no seu tamanho.
-
 		* Algoritmo de compressão: Deflate
 
 	* PNG, JPG
 		* Esses tipos de arquivo já sofreram um processo de compressão na sua criação, o resultado de uma nova compressão não é tão significativa.
+
 		* No aplicativo de demonstração, tem um exemplo de compressão de imagem no format png, no total de 42.436 bytes:
+			#### Resultado
 			* Compressão e codificação em Base64: Um aumento de 13.808 bytes ou 32,53% no seu tamanho.
 			* Compressão: Uma redução de 255 bytes ou 0,60% no seu tamanho.
+		* Algoritmo de compressão: Deflate
 
 ## Instalação Manual:
 
