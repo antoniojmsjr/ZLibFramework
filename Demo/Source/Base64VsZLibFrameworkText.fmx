@@ -59,9 +59,9 @@ inherited frmBase64VsZLibFrameworkText: TfrmBase64VsZLibFrameworkText
                 '64 n'#227'o comprimi dados, somente codifica.'
               ''
               
-                '* ZLibFramework: Tamanho do texto original 94.543, tamanho do te' +
-                'xto compactado e codificado em Base64 3.376, uma diminui'#231#227'o de 9' +
-                '1.167 ou 2.800%'
+                '* ZLibFramework: Tamanho do texto original 94.543 caracteres, ta' +
+                'manho do texto compactado e codificado em Base64 3.376 caractere' +
+                's, uma diminui'#231#227'o de 91.167 caracteres ou 96,42%'
               ''
               
                 '-- Analisando o resultado, verificamos que o ZLibFramework al'#233'm ' +

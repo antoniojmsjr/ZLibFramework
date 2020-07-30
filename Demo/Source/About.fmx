@@ -46,11 +46,11 @@ inherited frmAbout: TfrmAbout
                 'Bibloteca desenvolvida para compacta'#231#227'o e descompacta'#231#227'o com a o' +
                 'p'#231#227'o de codifica'#231#227'o em Base64.'
               ''
-              'Biblioteca foi dividade em duas classes:'
+              'Biblioteca foi dividida em duas classes:'
               ''
               
-                '* Base64: Classe de compacta'#231#227'o e codifica'#231#227'o para Base64 e desc' +
-                'ompacta'#231#227'o e decodifica'#231#227'o da Base64.'
+                '* Base64: Classe de compress'#227'o e codifica'#231#227'o para Base64 e decod' +
+                'ifica'#231#227'o e descompress'#227'o da Base64.'
               ''
               '* Data: Classe somente de compacta'#231#227'o e descompacta'#231#227'o de dados.'
               ''

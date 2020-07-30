@@ -905,7 +905,6 @@ object frmMain: TfrmMain
     Size.Width = 320.000000000000000000
     Size.Height = 842.000000000000000000
     Size.PlatformDefault = False
-    Visible = False
     TabOrder = 0
     object lytMenu: TLayout
       Align = Client
