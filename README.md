@@ -13,7 +13,7 @@
 
 Biblioteca de compressão, descompressão e codificação em Base64.
 
-Implementado na linguagem Delphi, e utiliza o conceito de [interface fluente](https://en.wikipedia.org/wiki/Fluent_interface) para guiar no uso da biblioteca.</br>
+Implementado na linguagem Delphi, e utiliza o conceito de [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) para guiar no uso da biblioteca.</br>
 A biblioteca desenvolvida utilizando as classes nativas do Delphi.
 
 * `Base64`: Classe de compressão e codificação para Base64 e decodificação e descompressão da Base64.
