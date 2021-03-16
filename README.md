@@ -61,7 +61,7 @@ Framework de compressão e descompressão com a opção de codificação em Base
 
 ## Instalação Automatizada
 
-Utilizando o [**Boss**](https://github.com/HashLoad/boss) (Dependency anager for Delphi) é possível instalar a biblioteca de forma automática.
+Utilizando o [**Boss**](https://github.com/HashLoad/boss) (Dependency Manager for Delphi) é possível instalar a biblioteca de forma automática.
 
 ```
 boss install github.com/antoniojmsjr/ZLibFramework
