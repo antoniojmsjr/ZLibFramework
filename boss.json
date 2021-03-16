@@ -1,0 +1,9 @@
+{
+	"name": "ZLibFramework",
+	"description": "Biblioteca de compressão, descompressão e codificação em Base64 em Delphi.",
+	"version": "1.0.0",
+	"homepage": "https://github.com/antoniojmsjr/ZLibFramework",
+	"mainsrc": "Source/",
+	"projects": [],
+	"dependencies": {}
+}
