@@ -133,12 +133,12 @@ var
 begin
   lInput := frmFrameBoxTextZLibFrameworkInput.Text;
 
-  TZLib
+  lResultCompress := TZLib
     .Base64
       .Compress
         .Deflate
           .Level(TZLibCompressionLevelType.Max)
-          .Text(lInput, lResultCompress);
+          .Text(lInput);
 
   frmFrameBoxTextZLibFrameworkInput.MD5 := lResultCompress.MD5Input;
 

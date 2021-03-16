@@ -44,7 +44,7 @@ type
     FGzip: IZLibMethodsCompression;
   public
     { public declarations }
-    constructor Create(const pParent: IZLibOperation); virtual;
+    constructor Create(pParent: IZLibOperation); virtual;
     function Deflate: IZLibMethodsCompression;
     function GZip: IZLibMethodsCompression;
     function &End: IZLibOperation;
@@ -61,7 +61,7 @@ type
     { protected declarations }
   public
     { public declarations }
-    constructor Create(const pParent: IZLibOperation); override;
+    constructor Create(pParent: IZLibOperation); override;
   end;
 
   {$ENDREGION}
@@ -75,7 +75,7 @@ type
     { protected declarations }
   public
     { public declarations }
-    constructor Create(const pParent: IZLibOperation); override;
+    constructor Create(pParent: IZLibOperation); override;
   end;
 
   {$ENDREGION}
@@ -107,7 +107,7 @@ type
                                    out pMD5Stream: string): TBytes;
   public
     { public declarations }
-    constructor Create(const pParent: IZLibAlgorithmCompression); virtual;
+    constructor Create(pParent: IZLibAlgorithmCompression); virtual;
   end;
 
   {$ENDREGION}
@@ -118,17 +118,17 @@ type
   strict private
     { private declarations }
     FCompressionLevel: TZLibCompressionLevelType;
+    function Level(const pCompressionLevel: TZLibCompressionLevelType): IZLibMethodsCompression;
+    function Text(const pInput: string): IZLibResult; overload;
+    function Text(const pInput: string; const pEncoding: TEncoding): IZLibResult; overload;
+    function SaveToFile(const pInput: string; const pFileName: TFileName): IZLibResult;
+    function LoadFromFile(const pInput: TFileName): IZLibResult;
+    function LoadFromStream(pInput: TStream): IZLibResult;
   protected
     { protected declarations }
   public
     { public declarations }
-    function Level(const pCompressionLevel: TZLibCompressionLevelType): IZLibMethodsCompression;
-    function Text(const pInput: string; out pResult: IZLibResult): IZLibAlgorithmCompression; overload;
-    function Text(const pInput: string; const pEncoding: TEncoding; out pResult: IZLibResult): IZLibAlgorithmCompression; overload;
-    function SaveToFile(const pInput: string; const pFileName: TFileName; out pResult: IZLibResult): IZLibAlgorithmCompression;
-    function LoadFromFile(const pInput: TFileName; out pResult: IZLibResult): IZLibAlgorithmCompression;
-    function LoadFromStream(pInput: TStream; out pResult: IZLibResult): IZLibAlgorithmCompression;
-    constructor Create(const pParent: IZLibAlgorithmCompression); override;
+    constructor Create(pParent: IZLibAlgorithmCompression); override;
   end;
 
   {$ENDREGION}
@@ -145,7 +145,7 @@ type
     function Encode(const pInput: TBytes): TBytes; override;
   public
     { public declarations }
-    constructor Create(const pParent: IZLibAlgorithmCompression); override;
+    constructor Create(pParent: IZLibAlgorithmCompression); override;
   end;
 
   {$ENDREGION}
@@ -159,7 +159,7 @@ type
     { protected declarations }
   public
     { public declarations }
-    constructor Create(const pParent: IZLibAlgorithmCompression); override;
+    constructor Create(pParent: IZLibAlgorithmCompression); override;
   end;
   
   {$ENDREGION}
@@ -173,7 +173,7 @@ type
     { protected declarations }
   public
     { public declarations }
-    constructor Create(const pParent: IZLibAlgorithmCompression); override;
+    constructor Create(pParent: IZLibAlgorithmCompression); override;
   end;
 
   {$ENDREGION}
@@ -189,7 +189,7 @@ type
     function Encode(const pInput: TBytes): TBytes; override;
   public
     { public declarations }
-    constructor Create(const pParent: IZLibAlgorithmCompression); override;
+    constructor Create(pParent: IZLibAlgorithmCompression); override;
   end;
 
   {$ENDREGION}
@@ -203,7 +203,7 @@ type
     { protected declarations }
   public
     { public declarations }
-    constructor Create(const pParent: IZLibAlgorithmCompression); override;
+    constructor Create(pParent: IZLibAlgorithmCompression); override;
   end;
 
   {$ENDREGION}
@@ -217,7 +217,7 @@ type
     { protected declarations }
   public
     { public declarations }
-    constructor Create(const pParent: IZLibAlgorithmCompression); override;
+    constructor Create(pParent: IZLibAlgorithmCompression); override;
   end;
 
   {$ENDREGION}
@@ -231,7 +231,7 @@ uses
 {$REGION 'TZLibAlgorithmCompressionCustom'}
 
 constructor TZLibAlgorithmCompressionCustom.Create(
-  const pParent: IZLibOperation);
+  pParent: IZLibOperation);
 begin
   FParent := pParent;
 end;
@@ -256,7 +256,7 @@ end;
 {$REGION 'TZLibAlgorithmCompressionBase64'}
 
 constructor TZLibAlgorithmCompressionBase64.Create(
-  const pParent: IZLibOperation);
+  pParent: IZLibOperation);
 begin
   inherited Create(pParent);
   FDeflate := TZLibMethodsCompressionBase64Deflate.Create(Self);
@@ -268,7 +268,7 @@ end;
 {$REGION 'TZLibAlgorithmCompressionData'}
 
 constructor TZLibAlgorithmCompressionData.Create(
-  const pParent: IZLibOperation);
+  pParent: IZLibOperation);
 begin
   inherited Create(pParent);
   FDeflate := TZLibMethodsCompressionDataDeflate.Create(Self);
@@ -281,7 +281,7 @@ end;
 {$REGION 'TZLibMethodsCompressionCustom'}
 
 constructor TZLibMethodsCompressionCustom.Create(
-  const pParent: IZLibAlgorithmCompression);
+  pParent: IZLibAlgorithmCompression);
 begin
   FParent := pParent;
   FZLibOperationType := TZLibOperationType.Compress;
@@ -486,7 +486,7 @@ end;
 {$REGION 'TZLibMethodsCompression'}
 
 constructor TZLibMethodsCompression.Create(
-  const pParent: IZLibAlgorithmCompression);
+  pParent: IZLibAlgorithmCompression);
 begin
   inherited Create(pParent);
   FCompressionLevel := TZLibCompressionLevelType.Max;
@@ -499,15 +499,12 @@ begin
   FCompressionLevel := pCompressionLevel;
 end;
 
-function TZLibMethodsCompression.Text(const pInput: string;
-  out pResult: IZLibResult): IZLibAlgorithmCompression;
+function TZLibMethodsCompression.Text(const pInput: string): IZLibResult;
 var
   lResultCompression: TBytes;
   lMD5Input: string;
   lMD5Result: string;
 begin
-  Result := FParent;
-
   //COMPRESSION
   lResultCompression := CompressionFromText(pInput,
                                             FCompressionLevel,
@@ -518,24 +515,21 @@ begin
   lMD5Result := MD5Bytes(lResultCompression);
 
   //RESULT
-  pResult := TZLibResult.Create(FZLibOperationType,
-                                FZLibModeType,
-                                FZLibAlgorithmType,
-                                lResultCompression,
-                                lMD5Input,
-                                lMD5Result);
+  Result := TZLibResult.Create(FZLibOperationType,
+                               FZLibModeType,
+                               FZLibAlgorithmType,
+                               lResultCompression,
+                               lMD5Input,
+                               lMD5Result);
 end;
 
 function TZLibMethodsCompression.Text(const pInput: string;
-  const pEncoding: TEncoding;
-  out pResult: IZLibResult): IZLibAlgorithmCompression;
+  const pEncoding: TEncoding): IZLibResult;
 var
   lResultCompression: TBytes;
   lMD5Input: string;
   lMD5Result: string;
 begin
-  Result := FParent;
-
   //COMPRESSION
   lResultCompression := CompressionFromText(pInput,
                                             FCompressionLevel,
@@ -546,23 +540,20 @@ begin
   lMD5Result := MD5Bytes(lResultCompression);
 
   //RESULT
-  pResult := TZLibResult.Create(FZLibOperationType,
-                                FZLibModeType,
-                                FZLibAlgorithmType,
-                                lResultCompression,
-                                lMD5Input,
-                                lMD5Result);
+  Result := TZLibResult.Create(FZLibOperationType,
+                               FZLibModeType,
+                               FZLibAlgorithmType,
+                               lResultCompression,
+                               lMD5Input,
+                               lMD5Result);
 end;
 
-function TZLibMethodsCompression.LoadFromFile(const pInput: TFileName;
-  out pResult: IZLibResult): IZLibAlgorithmCompression;
+function TZLibMethodsCompression.LoadFromFile(const pInput: TFileName): IZLibResult;
 var
   lResultCompression: TBytes;
   lMD5Input: string;
   lMD5Result: string;
 begin
-  Result := FParent;
-
   //COMPRESSION
   lResultCompression := CompressionFromFile(pInput,
                                             FCompressionLevel,
@@ -572,23 +563,20 @@ begin
   lMD5Result := MD5Bytes(lResultCompression);
 
   //RESULT
-  pResult := TZLibResult.Create(FZLibOperationType,
-                                FZLibModeType,
-                                FZLibAlgorithmType,
-                                lResultCompression,
-                                lMD5Input,
-                                lMD5Result);
+  Result := TZLibResult.Create(FZLibOperationType,
+                               FZLibModeType,
+                               FZLibAlgorithmType,
+                               lResultCompression,
+                               lMD5Input,
+                               lMD5Result);
 end;
 
-function TZLibMethodsCompression.LoadFromStream(pInput: TStream;
-  out pResult: IZLibResult): IZLibAlgorithmCompression;
+function TZLibMethodsCompression.LoadFromStream(pInput: TStream): IZLibResult;
 var
   lResultCompression: TBytes;
   lMD5Input: string;
   lMD5Result: string;
 begin
-  Result := FParent;
-
   //COMPRESSION
   lResultCompression := CompressionFromStream(pInput,
                                               FCompressionLevel,
@@ -598,25 +586,22 @@ begin
   lMD5Result := MD5Bytes(lResultCompression);
 
   //RESULT
-  pResult := TZLibResult.Create(FZLibOperationType,
-                                FZLibModeType,
-                                FZLibAlgorithmType,
-                                lResultCompression,
-                                lMD5Input,
-                                lMD5Result);
+  Result := TZLibResult.Create(FZLibOperationType,
+                               FZLibModeType,
+                               FZLibAlgorithmType,
+                               lResultCompression,
+                               lMD5Input,
+                               lMD5Result);
 end;
 
 function TZLibMethodsCompression.SaveToFile(const pInput: string;
-  const pFileName: TFileName;
-  out pResult: IZLibResult): IZLibAlgorithmCompression;
+  const pFileName: TFileName): IZLibResult;
 var
   lResultCompression: TBytes;
   lFile: TBytesStream;
   lMD5Input: string;
   lMD5Result: string;
 begin
-  Result := FParent;
-
   //COMPRESSION
   lResultCompression := CompressionFromText(pInput,
                                             FCompressionLevel,
@@ -635,12 +620,12 @@ begin
   end;
 
   //RESULT
-  pResult := TZLibResult.Create(FZLibOperationType,
-                                FZLibModeType,
-                                FZLibAlgorithmType,
-                                lResultCompression,
-                                lMD5Input,
-                                lMD5Result);
+  Result := TZLibResult.Create(FZLibOperationType,
+                               FZLibModeType,
+                               FZLibAlgorithmType,
+                               lResultCompression,
+                               lMD5Input,
+                               lMD5Result);
 end;
 
 {$ENDREGION}
@@ -649,7 +634,7 @@ end;
 {$REGION 'TZLibMethodsCompressionBase64'}
 
 constructor TZLibMethodsCompressionBase64.Create(
-  const pParent: IZLibAlgorithmCompression);
+  pParent: IZLibAlgorithmCompression);
 begin
   inherited Create(pParent);
   FZLibModeType := TZLibModeType.Base64;
@@ -678,7 +663,7 @@ end;
 {$REGION 'TZLibMethodsCompressionBase64Deflate'}
 
 constructor TZLibMethodsCompressionBase64Deflate.Create(
-  const pParent: IZLibAlgorithmCompression);
+  pParent: IZLibAlgorithmCompression);
 begin
   inherited Create(pParent);
   FZLibAlgorithmType := TZLibAlgorithmType.Deflate;
@@ -689,7 +674,7 @@ end;
 {$REGION 'TZLibMethodsCompressionBase64GZip'}
 
 constructor TZLibMethodsCompressionBase64GZip.Create(
-  const pParent: IZLibAlgorithmCompression);
+  pParent: IZLibAlgorithmCompression);
 begin
   inherited Create(pParent);
   FZLibAlgorithmType := TZLibAlgorithmType.GZip;
@@ -701,7 +686,7 @@ end;
 {$REGION 'TZLibMethodsCompressionData'}
 
 constructor TZLibMethodsCompressionData.Create(
-  const pParent: IZLibAlgorithmCompression);
+  pParent: IZLibAlgorithmCompression);
 begin
   inherited Create(FParent);
   FZLibModeType := TZLibModeType.Data;
@@ -718,7 +703,7 @@ end;
 {$REGION 'TZLibMethodsCompressionDataDeflate'}
 
 constructor TZLibMethodsCompressionDataDeflate.Create(
-  const pParent: IZLibAlgorithmCompression);
+  pParent: IZLibAlgorithmCompression);
 begin
   inherited Create(pParent);
   FZLibAlgorithmType := TZLibAlgorithmType.Deflate;
@@ -729,7 +714,7 @@ end;
 {$REGION 'TZLibMethodsCompressionDataGZip'}
 
 constructor TZLibMethodsCompressionDataGZip.Create(
-  const pParent: IZLibAlgorithmCompression);
+  pParent: IZLibAlgorithmCompression);
 begin
   inherited Create(pParent);
   FZLibAlgorithmType := TZLibAlgorithmType.GZip;

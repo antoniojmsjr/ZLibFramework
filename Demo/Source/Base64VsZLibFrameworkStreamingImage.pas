@@ -179,12 +179,12 @@ begin
     lImage.Size := frmFrameBoxImageZLibFrameworkInput.Image.Size;
     lImage.LoadFromStream(frmFrameBoxImageZLibFrameworkInput.Image);
 
-    TZLib
+    lResultCompress := TZLib
       .Base64
         .Compress
           .Deflate
             .Level(TZLibCompressionLevelType.Max)
-              .LoadFromStream(lImage, lResultCompress);
+              .LoadFromStream(lImage);
 
     frmFrameBoxImageZLibFrameworkInput.MD5 := lResultCompress.MD5Input;
 

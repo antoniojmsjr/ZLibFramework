@@ -357,7 +357,7 @@ inherited frmProcessFile: TfrmProcessFile
                     inherited lbFile: TListBox
                       Size.Width = 370.500000000000000000
                       Size.Height = 138.500000000000000000
-                      Viewport.Width = 354.500000000000000000
+                      Viewport.Width = 370.500000000000000000
                       Viewport.Height = 138.500000000000000000
                       inherited lbiHeader: TListBoxItem
                         Size.Width = 354.000000000000000000
@@ -828,7 +828,7 @@ inherited frmProcessFile: TfrmProcessFile
                     inherited lbFile: TListBox
                       Size.Width = 365.500000000000000000
                       Size.Height = 137.500000000000000000
-                      Viewport.Width = 349.500000000000000000
+                      Viewport.Width = 365.500000000000000000
                       Viewport.Height = 137.500000000000000000
                       inherited lbiHeader: TListBoxItem
                         Size.Width = 349.000000000000000000

@@ -1,8 +1,10 @@
-![Maintained YES](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
-![Delphi Supported Versions](https://img.shields.io/badge/Delphi%20Supported%20Versions-Tokyo%2010.2.3%20and%20ever-blue.svg)
-![Platforms](https://img.shields.io/badge/Platforms-Win32%20and%20Win64-red.svg)
-![Compatibility](https://img.shields.io/badge/Compatibility-VCL,%20Firemonkey,%20DataSnap%20-brightgreen.svg)
-![](https://img.shields.io/github/stars/antoniojmsjr/ZLibFramework.svg) ![](https://img.shields.io/github/forks/antoniojmsjr/ZLibFramework.svg) ![](https://img.shields.io/github/issues/antoniojmsjr/ZLibFramework.svg)
+![Maintained YES](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square&color=important)
+![Memory Leak Verified YES](https://img.shields.io/badge/Memory%20Leak%20Verified%3F-yes-green.svg?style=flat-square&color=important)
+![Delphi Supported Versions](https://img.shields.io/badge/Delphi%20Supported%20Versions-Tokyo%2010.2.3%20and%20above-blue.svg?style=flat-square)
+![Compatibility](https://img.shields.io/badge/Compatibility-VCL,%20Firemonkey,%20DataSnap,%20Horse,%20RDW,%20RADServer-blue.svg?style=flat-square)
+![Stars](https://img.shields.io/github/stars/antoniojmsjr/ZLibFramework.svg?style=flat-square) ![Forks](https://img.shields.io/github/forks/antoniojmsjr/ZLibFramework.svg?style=flat-square)
+![Issues](https://img.shields.io/github/issues/antoniojmsjr/ZLibFramework.svg?style=flat-square&color=blue)
+![Release](https://img.shields.io/github/v/release/antoniojmsjr/ZLibFramework?label=Latest%20release&style=flat-square&color=important)
 <p align="center">
   <a href="https://github.com/antoniojmsjr/ZLibFramework/blob/master/Image/Logo.png">
     <img alt="ZLibFramework" height="150" src="https://github.com/antoniojmsjr/ZLibFramework/blob/master/Image/Logo.png">
@@ -13,8 +15,8 @@
 
 Biblioteca de compressão, descompressão e codificação em Base64.
 
-Implementado na linguagem Delphi, e utiliza o conceito de [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) para guiar no uso da biblioteca.</br>
-A biblioteca desenvolvida utilizando as classes nativas do Delphi.
+Implementado na linguagem Delphi, utiliza o conceito de [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) para guiar no uso da biblioteca.</br>
+Biblioteca desenvolvida utilizando as classes nativas de compressão e descompressão(ZLib) e codificação Base64 do Delphi.
 
 * `Base64`: Classe de compressão e codificação para Base64 e decodificação e descompressão da Base64.
 
@@ -57,6 +59,14 @@ Framework de compressão e descompressão com a opção de codificação em Base
 			* Compressão: Uma **redução** de 255 bytes ou **0,60%** no seu tamanho.
 		* Algoritmo de compressão: Deflate
 
+## Instalação Automatizada
+
+Utilizando o [**Boss**](https://github.com/HashLoad/boss) (Dependency anager for Delphi) é possível instalar a biblioteca de forma automática.
+
+```
+boss install github.com/antoniojmsjr/ZLibFramework
+```
+
 ## Instalação Manual:
 
 Project > Options > Delphi Compiler > Target > All Configurations > Search path
@@ -77,12 +87,12 @@ var
   lMsgError: string;
 begin
   try
-    TZLib
+    lResultCompress := TZLib
       .Base64
         .Compress
           .Deflate
             .Level(TZLibCompressionLevelType.Max)
-            .Text('12345', lResultCompress);
+            .Text('1234567890');
 
     Application.MessageBox(PWideChar(lResultCompress.TextUTF8), 'C O M P R E S S Ã O', MB_OK + MB_ICONINFORMATION);
   except

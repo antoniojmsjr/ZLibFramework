@@ -149,21 +149,21 @@ begin
       case pAlgorithm of
         TZLibAlgorithmType.Deflate:
         begin
-          TZLib
+          pResultDecompress := TZLib
             .Base64
               .Compress
                 .Deflate
                   .Level(TZLibCompressionLevelType.Max)
-                  .Text(pInput, pResultDecompress);
+                  .Text(pInput);
         end;
         TZLibAlgorithmType.GZip:
         begin
-          TZLib
+          pResultDecompress := TZLib
             .Base64
               .Compress
                 .GZip
                   .Level(TZLibCompressionLevelType.Max)
-                  .Text(pInput, pResultDecompress);
+                  .Text(pInput);
         end;
       end;
     end;
@@ -175,21 +175,21 @@ begin
           case pContentType of
             1: //TEXT
             begin
-              TZLib
+              pResultDecompress := TZLib
                 .Data
                   .Compress
                     .Deflate
                       .Level(TZLibCompressionLevelType.Max)
-                      .Text(pInput, pResultDecompress);
+                      .Text(pInput);
             end;
             2: //FILE
             begin
-              TZLib
+              pResultDecompress := TZLib
                 .Data
                   .Compress
                     .Deflate
                       .Level(TZLibCompressionLevelType.Max)
-                      .LoadFromFile(pInput, pResultDecompress);
+                      .LoadFromFile(pInput);
             end;
           end;
         end;
@@ -198,21 +198,21 @@ begin
           case pContentType of
             1: //TEXT
             begin
-              TZLib
+              pResultDecompress := TZLib
                 .Data
                   .Compress
                     .GZip
                       .Level(TZLibCompressionLevelType.Max)
-                      .Text(pInput, pResultDecompress);
+                      .Text(pInput);
             end;
             2: //FILE
             begin
-              TZLib
+              pResultDecompress := TZLib
                 .Data
                   .Compress
                     .GZip
                       .Level(TZLibCompressionLevelType.Max)
-                      .LoadFromFile(pInput, pResultDecompress);
+                      .LoadFromFile(pInput);
             end;
           end;
         end;
@@ -235,19 +235,19 @@ begin
       case pAlgorithm of
         TZLibAlgorithmType.Deflate:
         begin
-          TZLib
+          pResultDecompress := TZLib
             .Base64
               .Decompress
                 .Deflate
-                  .SaveToFile(pInput, pFile, pResultDecompress);
+                  .SaveToFile(pInput, pFile);
         end;
         TZLibAlgorithmType.GZip:
         begin
-          TZLib
+          pResultDecompress := TZLib
             .Base64
               .Decompress
                 .GZip
-                  .SaveToFile(pInput, pFile, pResultDecompress);
+                  .SaveToFile(pInput, pFile);
         end;
       end;
     end;
@@ -256,19 +256,19 @@ begin
       case pAlgorithm of
         TZLibAlgorithmType.Deflate:
         begin
-          TZLib
+          pResultDecompress := TZLib
             .Data
               .Decompress
                 .Deflate
-                  .LoadFromFile(pInput, pResultDecompress);
+                  .LoadFromFile(pInput);
         end;
         TZLibAlgorithmType.GZip:
         begin
-          TZLib
+          pResultDecompress := TZLib
             .Data
               .Decompress
                 .GZip
-                  .LoadFromFile(pInput, pResultDecompress);
+                  .LoadFromFile(pInput);
         end;
       end;
     end;

@@ -103,7 +103,7 @@ type
     /// var
     ///   lResult: IZLibResult;
     /// begin
-    ///   Exemplo: TZLib.Data.Compress.Deflate.Level(TZLibCompressionLevelType.Max).Text('Texto12345', lResult);
+    ///   Exemplo: lResult := TZLib.Data.Compress.Deflate.Level(TZLibCompressionLevelType.Max).Text('Texto12345');
     /// end;
     /// </code>
     /// </summary>
@@ -114,7 +114,7 @@ type
     /// <param name="CompressionLevel">
     /// Identificação do nível de compressão.
     /// </param>
-    /// <returns>Retorna uma interface do tipo IZLibMethodsCompression que implementa o conceito de interface fluente para guiar no uso da biblioteca.</returns>
+    /// <returns>Retorna uma interface do tipo IZLibMethodsCompression que implementa o conceito de fluent interface para guiar no uso da biblioteca.</returns>
     function Level(const CompressionLevel: TZLibCompressionLevelType): IZLibMethodsCompression;
     /// <summary>
     /// Compressão e codificação de uma string.
@@ -122,7 +122,7 @@ type
     /// var
     ///   lResult: IZLibResult;
     /// begin
-    ///   Exemplo: TZLib.Data.Compress.Deflate.Text('Texto12345', lResult);
+    ///   Exemplo: lResult := TZLib.Data.Compress.Deflate.Text('Texto12345');
     /// end;
     /// </code>
     /// </summary>
@@ -134,18 +134,15 @@ type
     /// <param name="Input">
     /// String na qual deseja-se compactar.
     /// </param>
-    /// <param name="Result">
-    /// Parâmetro de saída contendo o resultado da compactação e codificação do parâmetro de entrada.
-    /// </param>
-    /// <returns>Retorna uma interface do tipo IZLibAlgorithmCompression que implementa o conceito de interface fluente para guiar no uso da biblioteca.</returns>
-    function Text(const Input: string; out Result: IZLibResult): IZLibAlgorithmCompression; overload;
+    /// <returns>Retorna uma interface do tipo IZLibResult que contém o resultado do processo de compressão.</returns>
+    function Text(const Input: string): IZLibResult; overload;
     /// <summary>
     /// Compressão e codificação de uma string, com a opção de identificar um Encoding.
     /// <code>
     /// var
     ///   lResult: IZLibResult;
     /// begin
-    ///   Exemplo: TZLib.Data.Compress.Deflate.Text('Texto12345', TEncoding.UTF8, lResult);
+    ///   Exemplo: lResult := TZLib.Data.Compress.Deflate.Text('Texto12345', TEncoding.UTF8);
     /// end;
     /// </code>
     /// </summary>
@@ -160,18 +157,15 @@ type
     /// <param name="Encoding">
     /// Identificação do Encoding.
     /// </param>
-    /// <param name="Result">
-    /// Parâmetro de saída contendo o resultado da compactação e codificação do parâmetro de entrada.
-    /// </param>
-    /// <returns>Retorna uma interface do tipo IZLibAlgorithmCompression que implementa o conceito de interface fluente para guiar no uso da biblioteca.</returns>
-    function Text(const Input: string; const Encoding: TEncoding; out Result: IZLibResult): IZLibAlgorithmCompression; overload;
+    /// <returns>Retorna uma interface do tipo IZLibResult que contém o resultado do processo de compressão.</returns>
+    function Text(const Input: string; const Encoding: TEncoding): IZLibResult; overload;
     /// <summary>
-    /// Compressão e codificação de uma string, com a opção de salvar o resultado do processo de compactação.
+    /// Compressão e codificação de uma string, com a opção de salvar o resultado em um arquivo através do parâmetro FileName.
     /// <code>
     /// var
     ///   lResult: IZLibResult;
     /// begin
-    ///   Exemplo: TZLib.Data.Compress.Deflate.SaveToFile('Texto12345', 'C:\Teste.txt', lResult);
+    ///   Exemplo: lResult := TZLib.Data.Compress.Deflate.SaveToFile('Texto12345', 'C:\Teste.txt');
     /// end;
     /// </code>
     /// </summary>
@@ -186,18 +180,15 @@ type
     /// <param name="FileName">
     /// Nome do arquivo que será utilizado para salvar o resultado do processo de compactação.
     /// </param>
-    /// <param name="Result">
-    /// Parâmetro de saída contendo o resultado da compactação e codificação do parâmetro de entrada.
-    /// </param>
-    /// <returns>Retorna uma interface do tipo IZLibAlgorithmCompression que implementa o conceito de interface fluente para guiar no uso da biblioteca.</returns>
-    function SaveToFile(const Input: string; const FileName: TFileName; out Result: IZLibResult): IZLibAlgorithmCompression;
+    /// <returns>Retorna uma interface do tipo IZLibResult que contém o resultado do processo de compressão.</returns>
+    function SaveToFile(const Input: string; const FileName: TFileName): IZLibResult;
     /// <summary>
     /// Compressão e codificação de arquivo.
     /// <code>
     /// var
     ///   lResult: IZLibResult;
     /// begin
-    ///   Exemplo: TZLib.Data.Compress.Deflate.LoadFromFile('C:\Teste.txt', lResult);
+    ///   Exemplo: lResult := TZLib.Data.Compress.Deflate.LoadFromFile('C:\Teste.txt');
     /// end;
     /// </code>
     /// </summary>
@@ -209,18 +200,15 @@ type
     /// <param name="Input">
     /// Arquivo na qual deseja-se compactar.
     /// </param>
-    /// <param name="Result">
-    /// Parâmetro de saída contendo o resultado da compactação e codificação do parâmetro de entrada.
-    /// </param>
-    /// <returns>Retorna uma interface do tipo IZLibAlgorithmCompression que implementa o conceito de interface fluente para guiar no uso da biblioteca.</returns>
-    function LoadFromFile(const Input: TFileName; out Result: IZLibResult): IZLibAlgorithmCompression;
+    /// <returns>Retorna uma interface do tipo IZLibResult que contém o resultado do processo de compressão.</returns>
+    function LoadFromFile(const Input: TFileName): IZLibResult;
     /// <summary>
     /// Compressão e codificação de uma variavél Stream.
     /// <code>
     /// var
     ///   lResult: IZLibResult;
     /// begin
-    ///   Exemplo: TZLib.Data.Compress.Deflate.LoadFromStream(TStream, lResult);
+    ///   Exemplo: lResult := TZLib.Data.Compress.Deflate.LoadFromStream(TStream);
     /// end;
     /// </code>
     /// </summary>
@@ -231,11 +219,8 @@ type
     /// <param name="Input">
     /// Stream na qual deseja-se compactar.
     /// </param>
-    /// <param name="Result">
-    /// Parâmetro de saída contendo o resultado da compactação e codificação do parâmetro de entrada.
-    /// </param>
-    /// <returns>Retorna uma interface do tipo IZLibAlgorithmCompression que implementa o conceito de interface fluente para guiar no uso da biblioteca.</returns>
-    function LoadFromStream(Input: TStream; out Result: IZLibResult): IZLibAlgorithmCompression;
+    /// <returns>Retorna uma interface do tipo IZLibResult que contém o resultado do processo de compressão.</returns>
+    function LoadFromStream(Input: TStream): IZLibResult;
   end;
 
   {$ENDREGION}
@@ -252,11 +237,11 @@ type
     /// var
     ///   lResult: IZLibResult;
     /// begin
-    ///   Exemplo: TZLib.Base64.Decompress.Deflate.Text('eNozNDI2MQUAAvgBAA==', lResult);
+    ///   Exemplo: lResult := TZLib.Base64.Decompress.Deflate.Text('eNozNDI2MQUAAvgBAA==');
     /// end;
     /// </code>
     /// </summary>
-    /// <returns>Retorna uma interface do tipo IZLibMethodsDecompression que implementa o conceito de interface fluente para guiar no uso da biblioteca.</returns>
+    /// <returns>Retorna uma interface do tipo IZLibMethodsDecompression que implementa o conceito de fluent interface para guiar no uso da biblioteca.</returns>
     function Deflate: IZLibMethodsDecompression;
     /// <summary>
     /// Processo de descompressão usando o algoritimo GZip.
@@ -264,11 +249,11 @@ type
     /// var
     ///   lResult: IZLibResult;
     /// begin
-    ///   Exemplo: TZLib.Base64.Decompress.GZip.Text('eNozNDI2MQUAAvgBAA==', lResult);
+    ///   Exemplo: lResult := TZLib.Base64.Decompress.GZip.Text('eNozNDI2MQUAAvgBAA==');
     /// end;
     /// </code>
     /// </summary>
-    /// <returns>Retorna uma interface do tipo IZLibMethodsDecompression que implementa o conceito de interface fluente para guiar no uso da biblioteca.</returns>
+    /// <returns>Retorna uma interface do tipo IZLibMethodsDecompression que implementa o conceito de fluent interface para guiar no uso da biblioteca.</returns>
     function GZip: IZLibMethodsDecompression;
     function &End: IZLibOperation;
   end;
@@ -281,7 +266,7 @@ type
     /// var
     ///   lResult: IZLibResult;
     /// begin
-    ///   Exemplo: TZLib.Base64.Decompress.Deflate.Text('eNozNDI2MQUAAvgBAA==', lResult);
+    ///   Exemplo: lResult := TZLib.Base64.Decompress.Deflate.Text('eNozNDI2MQUAAvgBAA==');
     /// end;
     /// </code>
     /// </summary>
@@ -292,18 +277,15 @@ type
     /// <param name="Input">
     /// String na qual deseja-se descompactar.
     /// </param>
-    /// <param name="Result">
-    /// Parâmetro de saída contendo o resultado da decodificação e descompactação do parâmetro de entrada.
-    /// </param>
-    /// <returns>Retorna uma interface do tipo IZLibAlgorithmDecompression que implementa o conceito de interface fluente para guiar no uso da biblioteca.</returns>
-    function Text(const Input: string; out Result: IZLibResult): IZLibAlgorithmDecompression;
+    /// <returns>Retorna uma interface do tipo IZLibResult que contém o resultado do processo de descompressão.</returns>
+    function Text(const Input: string): IZLibResult;
     /// <summary>
-    /// Decodificação e Descompressão de uma string, com a opção de salvar o resultado do processo de descompactação.
+    /// Decodificação e Descompressão de uma string, com a opção de salvar o resultado em um arquivo através do parâmetro FileName.
     /// <code>
     /// var
     ///   lResult: IZLibResult;
     /// begin
-    ///   Exemplo: TZLib.Data.Decompress.Deflate.SaveToFile('eNozNDI2MQUAAvgBAA==', 'C:\Teste.txt', lResult);
+    ///   Exemplo: lResult := TZLib.Data.Decompress.Deflate.SaveToFile('eNozNDI2MQUAAvgBAA==', 'C:\Teste.txt');
     /// end;
     /// </code>
     /// </summary>
@@ -318,18 +300,15 @@ type
     /// <param name="FileName">
     /// Nome do arquivo que será utilizado para salvar o resultado do processo de descompactação.
     /// </param>
-    /// <param name="Result">
-    /// Parâmetro de saída contendo o resultado da decodificação e descompactação do parâmetro de entrada.
-    /// </param>
-    /// <returns>Retorna uma interface do tipo IZLibAlgorithmDecompression que implementa o conceito de interface fluente para guiar no uso da biblioteca.</returns>
-    function SaveToFile(const Input: string; const FileName: TFileName; out Result: IZLibResult): IZLibAlgorithmDecompression;
+    /// <returns>Retorna uma interface do tipo IZLibResult que contém o resultado do processo de descompressão.</returns>
+    function SaveToFile(const Input: string; const FileName: TFileName): IZLibResult;
     /// <summary>
     /// Decodificação e Descompressão de arquivo.
     /// <code>
     /// var
     ///   lResult: IZLibResult;
     /// begin
-    ///   Exemplo: TZLib.Data.Decompress.Deflate.LoadFromFile('C:\Teste.txt', lResult);
+    ///   Exemplo: IZLibResult := TZLib.Data.Decompress.Deflate.LoadFromFile('C:\Teste.txt');
     /// end;
     /// </code>
     /// </summary>
@@ -340,18 +319,16 @@ type
     /// </remarks>
     /// <param name="Input">
     /// Arquivo na qual deseja-se descompactar.
-    /// <param name="Result">
-    /// Parâmetro de saída contendo o resultado da decodificação e descompactação do parâmetro de entrada.
     /// </param>
-    /// <returns>Retorna uma interface do tipo IZLibAlgorithmDecompression que implementa o conceito de interface fluente para guiar no uso da biblioteca.</returns>
-    function LoadFromFile(const Input: TFileName; out Result: IZLibResult): IZLibAlgorithmDecompression;
+    /// <returns>Retorna uma interface do tipo IZLibResult que contém o resultado do processo de descompressão.</returns>
+    function LoadFromFile(const Input: TFileName): IZLibResult;
     /// <summary>
     /// Decodificação e Descompressão de uma variavél Stream.
     /// <code>
     /// var
     ///   lResult: IZLibResult;
     /// begin
-    ///   Exemplo: TZLib.Data.Decompress.Deflate.LoadFromStream(TStream, lResult);
+    ///   Exemplo: IZLibResult := TZLib.Data.Decompress.Deflate.LoadFromStream(TStream);
     /// end;
     /// </code>
     /// </summary>
@@ -362,11 +339,8 @@ type
     /// <param name="Input">
     /// Stream na qual deseja-se descompactar.
     /// </param>
-    /// <param name="Result">
-    /// Parâmetro de saída contendo o resultado da decodificação e descompactação do parâmetro de entrada.
-    /// </param>
-    /// <returns>Retorna uma interface do tipo IZLibAlgorithmDecompression que implementa o conceito de interface fluente para guiar no uso da biblioteca.</returns>
-    function LoadFromStream(Input: TStream; out Result: IZLibResult): IZLibAlgorithmDecompression; overload;
+    /// <returns>Retorna uma interface do tipo IZLibResult que contém o resultado do processo de descompressão.</returns>
+    function LoadFromStream(Input: TStream): IZLibResult; overload;
   end;
 
   {$ENDREGION}

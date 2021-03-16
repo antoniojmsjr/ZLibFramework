@@ -162,12 +162,12 @@ var
 begin
   lInput := edtDemoBase64EncodeValue.Text;
 
-  TZLib
+  lResultCompress := TZLib
     .Base64
       .Compress
         .Deflate
           .Level(TZLibCompressionLevelType.Max)
-            .Text(lInput, lResultCompress);
+            .Text(lInput);
 
   edtDemoBase64EncodeMD5Value.Text := lResultCompress.MD5Input;
 
@@ -188,11 +188,11 @@ begin
 
   lInput := edtDemoBase64DecodeValue.Text;
 
-  TZLib
+  lResultDecompress := TZLib
     .Base64
       .Decompress
         .Deflate
-          .Text(lInput, lResultDecompress);
+          .Text(lInput);
 
   edtDemoBase64DecodeMD5Value.Text := lResultDecompress.MD5Input;
 
@@ -208,12 +208,12 @@ var
 begin
   lInput := edtDemoDataEncodeValue.Text;
 
-  TZLib
+  lResultCompress := TZLib
     .Data
       .Compress
         .Deflate
           .Level(TZLibCompressionLevelType.Max)
-            .Text(lInput, lResultCompress);
+            .Text(lInput);
 
   edtDemoDataEncodeMD5Value.Text := lResultCompress.MD5Input;
 
@@ -234,11 +234,11 @@ begin
 
   lInput := edtDemoDataDecodeValue.Text;
 
-  TZLib
+  lResultDecompress := TZLib
     .Data
       .Decompress
         .Deflate
-          .Text(lInput, lResultDecompress);
+          .Text(lInput);
 
   edtDemoDataDecodeMD5Value.Text := lResultDecompress.MD5Input;
 

@@ -61,21 +61,21 @@ type
     /// </summary>
     procedure SaveToFile(const FileName: TFileName);
     /// <summary>
-    /// Identifica o tipo de formato utilizado no processo de compressão e descompressão.
+    /// Identificação do tipo de formato utilizado no processo de compressão e descompressão.
     /// </summary>
     /// <remarks>
     /// <para>* Verificar na unit ZLibFramework.Types o tipo TZLibModeType os valores disponíveis.</para>
     /// </remarks>
     property Mode: TZLibModeType read GetMode;
     /// <summary>
-    /// Identifica a operação utilizada no processo de compressão e descompressão.
+    /// Identificação da operação utilizada no processo de compressão e descompressão.
     /// </summary>
     /// <remarks>
     /// <para>* Verificar na unit ZLibFramework.Types o tipo TZLibOperationType os valores disponíveis.</para>
     /// </remarks>
     property Operation: TZLibOperationType read GetOperation;
     /// <summary>
-    /// Identifica o algoritimo utilizado no processo de compressão e descompressão.
+    /// Identificação do algoritmo utilizado no processo de compressão e descompressão.
     /// </summary>
     /// <remarks>
     /// <para>* Verificar na unit ZLibFramework.Types o tipo TZLibAlgorithmType os valores disponíveis.</para>

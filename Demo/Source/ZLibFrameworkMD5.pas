@@ -141,12 +141,12 @@ begin
   try
     lInput.CopyFrom(frmFrameBoxImageEncodeInput.Image, frmFrameBoxImageEncodeInput.Image.Size);
 
-    TZLib
+    lResultCompress := TZLib
       .Base64
         .Compress
           .Deflate
             .Level(TZLibCompressionLevelType.Max)
-            .LoadFromStream(lInput, lResultCompress);
+            .LoadFromStream(lInput);
 
     frmFrameBoxImageEncodeInput.MD5 := lResultCompress.MD5Input;
 
@@ -166,22 +166,22 @@ var
 begin
 
   //DECODE >> IMAGE
-  TZLib
+  lResultDecompressImage := TZLib
     .Base64
       .Decompress
         .Deflate
-          .Text(FEncodeResult, lResultDecompressImage);
+          .Text(FEncodeResult);
 
   //RESULT
   frmFrameBoxImageDecode.MD5 := lResultDecompressImage.MD5Result;
   frmFrameBoxImageDecode.Image := lResultDecompressImage.Stream;
 
   //DECODE >> TEXT
-  TZLib
+  lResultDecompressText := TZLib
     .Base64
       .Decompress
         .Deflate
-          .Text(FEncodeResult, lResultDecompressText);
+          .Text(FEncodeResult);
 
   //RESULT
   frmFrameBoxTextDecode.Text := lResultDecompressText.Text[TEncoding.ANSI];
